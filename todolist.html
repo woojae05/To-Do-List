@@ -10,6 +10,7 @@
     <script>
         var List = [];
         var i=0;
+        var no =0;
 
         function addTodo(todo) {
             for (i ; i < 1000; i++) {
@@ -40,9 +41,9 @@
 
         }
         function deletetodo() {
-            var el = document.getElementById(body)
-            
-            
+            no = prompt("삭제하고 싶은 번호를 누르시오");
+            List[no-1]="삭제됨"
+
         }
             
         
@@ -60,6 +61,7 @@
 ">
     <input type="button" value="삭제" id="delete_btn" onclick="
         deletetodo();
+        showTodoList();
     ">
 </body>
 
