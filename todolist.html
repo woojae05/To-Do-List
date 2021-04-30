@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var List = [];
+        var i=0;
+
+        function addTodo(todo) {
+            for (i ; i < 1000; i++) {
+                List[i] = prompt("해야할일을 적으시오(0입력시 종료)");
+                if (List[i] == 0) {
+                    break;
+                }
+            }
+
+        }
+
+        function showTodoList() {
+            for (var i = 0; i < List.length; i++) {
+                if (List[i] == 0) {
+                    break;
+                }
+                document.write((i + 1) + '.' + List[i] + '<br>');
+            }
+        }
+
+        function plustodo() {
+            for (i ; i < 1000; i++) {
+                List[i] = prompt("해야할일을 적으시오(0입력시 종료)");
+                if (List[i] == 0) {
+                    break;
+                }
+            }
+
+        }
+        function deletetodo() {
+            var el = document.getElementById(body)
+            
+            
+        }
+            
+        
+
+        addTodo();
+        showTodoList();
+    </script>
+
+
+    <input type="button" value="추가" id="change_btn" class="btn1" onclick=" 
+        
+        plustodo();
+        showTodoList();
+
+">
+    <input type="button" value="삭제" id="delete_btn" onclick="
+        deletetodo();
+    ">
+</body>
+
+</html>
