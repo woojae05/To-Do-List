@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang="ko">
-
 <head>
     <meta charset="UTF-8">
     <title>Document</title>
+    <link rel="stylesheet" href="./tuti.css">
 </head>
 
 <body>
 
-    <div id="todoListBox">
-        <h1></h1>
+    <div id="todoListBox" class="todoBox">
+
     </div>
 
     <input type="button" value="추가" id="change_btn" class="btn1" onclick=" 
@@ -50,7 +50,7 @@
 
             function deletetodo() {
                 no = prompt("삭제하고 싶은 번호를 누르시오");
-                List[no - 1] = "삭제됨"
+                List[i].remove(List[no-1]);
 
             }
     </script>

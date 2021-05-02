@@ -1,0 +1,19 @@
+body{
+
+    background-color:rgb(225, 225, 57); 
+    
+}
+.todoBox{
+    margin-top: 20%;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+#change_btn{
+   width:100px;
+   height: 100px;
+}
+#delete_btn{
+    width:100px;
+    height: 100px;
+}
