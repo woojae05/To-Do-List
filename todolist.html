@@ -9,19 +9,21 @@
 
 <body>
     <header>To Do List</header>
-    <input type="text" id="textbox" placeholder="해야할일" required value="">
+    <!-- <input type="text" id="textbox" placeholder="해야할일" required value="" onchange="
+    plusetodo();
+    "> -->
     <input type="button" value="추가" id="change_btn" class="btn1" onclick=" 
         plustodo();
         showTodoList();
         ">
     <input type="button" value="삭제" id="delete_btn" onclick="
+        deletetodo();
+        showTodoList();
     ">
     <div id="todoListBox" class="todoBox">
     </div>
     
     <script>
-        var c= document.getElementById('textbox');
-        var b = document.getElementsByTagName('div');
         var a = document.getElementById('todoListBox');
         var List = [];
         var i = 0;
@@ -30,29 +32,26 @@
 
 
         function showTodoList() {
-            for (j; j < List.length; j++) {
-                a.innerHTML += "<h1>" + (j + 1) + "." + " " + List[j] + "<h1>";
-                    
-                    }
+            var tags ="";
+            for (j=0; j < List.length; j++) {
+                    tags += "<h1>" + (j + 1) + "." + " " + List[j] + "</h1>";
+
+                }
+                a.innerHTML = tags;
+                
         }
 
-        // function plustodo() {
-        //     while (1) {
-        //         var temp = prompt("해야할일을 추가 하시오(0입력시 종료)")
-        //         if (temp == 0) {
-        //             break;
-        //         }
-        //         List[i] = temp;
-        //         i++;
-        //     }
-        // }
-        function plusetodo(){
-            
+        function plustodo() {
+            List[i]=prompt("해야할일을 입력하시오");
+            i++;
         }
-
         function deletetodo() {
             no = prompt("삭제할 번호를 누르시오")
-            List[no-1]=null;
+            List.splice(no-1,1);
+            i--;
+        }
+        function fixtodo(){
+            
         }
     </script>
 
