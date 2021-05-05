@@ -1,9 +1,10 @@
 header{
     font-size: 60px;
+    width: 50%;
 }
 body{
 
-    background-color:rgb(225, 225, 57); 
+    background-color:rgb(195, 226, 238); 
     
 }
 .todoBox{
@@ -14,22 +15,31 @@ body{
     font-size: 40px;
 }
 #change_btn{
-   width:100px;
-   height: 100px;
-   background-color:rgb(225, 225, 57);
-   border-radius: 20px;
-   font-size: 20px;
-   flex: auto;
+   width:80px;
+   height: 80px;
+   background-color:rgb(131, 208, 238);
+   border-radius: 50%;
+   font-size: 50px;
+   float: right;
+   margin-right:10px;
+   color: rgb(57, 57, 57);
 }
 #delete_btn{
-    width:100px;
-    height: 100px;
-   background-color:rgb(225, 225, 57);
-   border-radius: 20px;
-   font-size: 20px; 
-}
-#textbox{
-    width:400px;
-    height: 50px;
+    width: 80px;
+    height: 80px;
+    background-color:rgb(131, 208, 238);
+    border-radius: 50%;
     font-size: 20px;
+    float: right; 
+    font-weight: 900;
+    margin-right: 10px  ;
+}
+#fix_btn{
+    width: 80px;
+    height: 80px;
+    background-color:rgb(131, 208, 238);
+    border-radius: 50%;
+    font-size: 20px;
+    float: right; 
+    font-weight: 900;
 }

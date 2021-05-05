@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Document</title>
+    <title>To Do List</title>
     <link rel="stylesheet" href="./todolist.css">
 </head>
 
@@ -12,17 +12,23 @@
     <!-- <input type="text" id="textbox" placeholder="해야할일" required value="" onchange="
     plusetodo();
     "> -->
-    <input type="button" value="추가" id="change_btn" class="btn1" onclick=" 
-        plustodo();
-        showTodoList();
+    <footer>
+        <input type="button" value="수정" id="fix_btn" onclick="
+        fixtodo();
         ">
-    <input type="button" value="삭제" id="delete_btn" onclick="
+        <input type="button" value="삭제" id="delete_btn" onclick="
         deletetodo();
         showTodoList();
-    ">
+        ">
+        <input type="button" value="+" id="change_btn" class="btn1" onclick=" 
+            plustodo();
+            showTodoList();
+            ">
+    </footer>
     <div id="todoListBox" class="todoBox">
+
     </div>
-    
+
     <script>
         var a = document.getElementById('todoListBox');
         var List = [];
@@ -32,27 +38,36 @@
 
 
         function showTodoList() {
-            var tags ="";
-            for (j=0; j < List.length; j++) {
-                    tags += "<h1>" + (j + 1) + "." + " " + List[j] + "</h1>";
+            var tags = "";
+            for (j = 0; j < List.length; j++) {
+                tags += "<h1>" + (j + 1) + "." + " " + List[j] + "</h1>";
 
-                }
-                a.innerHTML = tags;
-                
+            }
+            a.innerHTML = tags;
+
         }
 
         function plustodo() {
-            List[i]=prompt("해야할일을 입력하시오");
+
+            List[i] = prompt("해야할일을 입력하시오");
+            if (List[i] == '') {
+                alert("삐!");
+            }
             i++;
         }
+
         function deletetodo() {
             no = prompt("삭제할 번호를 누르시오")
-            List.splice(no-1,1);
+            List.splice(no - 1, 1);
             i--;
         }
-        function fixtodo(){
-            
-        }
+
+        // function fixtodo() {
+        //     var fix = "";
+        //     no = prompt("수정할 번호를 누르시오");
+        //     fix = prompt('수정하시오');
+        //     List[no - 1].innertext(fix);
+        // }
     </script>
 
 
