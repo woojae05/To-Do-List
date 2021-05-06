@@ -9,12 +9,10 @@
 
 <body>
     <header>To Do List</header>
-    <!-- <input type="text" id="textbox" placeholder="해야할일" required value="" onchange="
-    plusetodo();
-    "> -->
     <footer>
         <input type="button" value="수정" id="fix_btn" onclick="
         fixtodo();
+        showTodoList();
         ">
         <input type="button" value="삭제" id="delete_btn" onclick="
         deletetodo();
@@ -58,17 +56,17 @@
 
         function deletetodo() {
             no = prompt("삭제할 번호를 누르시오")
-            List.splice(no - 1, 1);
+            List.splice(no - 1, 1);     
             i--;
         }
 
-        // function fixtodo() {
-        //     var fix = "";
-        //     no = prompt("수정할 번호를 누르시오");
-        //     fix = prompt('수정하시오');
-        //     List[no - 1].innertext(fix);
-        // }
-    </script>
+        function fixtodo() {
+            var fix = "";
+            no = prompt("수정할 번호를 누르시오");
+            List[no-1] = prompt('수정하시오');
+                
+        }
+        </script>
 
 
 
